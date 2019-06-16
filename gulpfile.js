@@ -1,5 +1,3 @@
-"use require";
-
 var gulp = require('gulp');
 var connect = require('gulp-connect'); // runs local dev server
 var open = require('gulp-open'); // Open a URL in a web browser
@@ -81,7 +79,7 @@ gulp.task('images', async function () {
 
    //publish favicon
    gulp.src('./src/favicon.ico')
-       .pipe(gulp.dest(config.paths.dist));
+       .pipe(gulp.dest(config.paths.dist + '/favicon'));
 });
 
 
