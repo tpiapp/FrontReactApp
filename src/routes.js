@@ -3,7 +3,7 @@ var Route = require('react-router-dom').Route;
 var Switch = require('react-router-dom').Switch;
 var Redirect = require('react-router-dom').Redirect;
 
-var Home = require('./components/home');
+var Home = require('./components/homePage/homePage');
 var NotFound = require('./components/pageNotFound/notFound');
 
 class Routes extends React.Component {
