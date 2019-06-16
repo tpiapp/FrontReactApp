@@ -1,0 +1,39 @@
+{
+  "name": "frontapp",
+  "version": "1.0.0",
+  "description": "Frontend of the TPI app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpiapp/FrontApp.git"
+  },
+  "keywords": [
+    "React",
+    "TPI"
+  ],
+  "author": "Juan Castelblanco - Santiago Peña",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tpiapp/FrontApp/issues"
+  },
+  "homepage": "https://github.com/tpiapp/FrontApp#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "browserify": "^16.2.3",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-open": "^3.0.1",
+    "jquery": "^3.4.1",
+    "react": "^16.8.6",
+    "react-router": "^5.0.1",
+    "reactify": "^1.1.1",
+    "toastr": "^2.1.4",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
