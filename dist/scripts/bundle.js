@@ -39633,7 +39633,7 @@ class App extends React.Component {
 
 module.exports = App;
 
-},{"../routes":46,"jquery":7,"react":32,"react-router-dom":26}],44:[function(require,module,exports){
+},{"../routes":47,"jquery":7,"react":32,"react-router-dom":26}],44:[function(require,module,exports){
 var React = require('react');
 
 class Home extends React.Component{
@@ -39641,7 +39641,7 @@ class Home extends React.Component{
       return (
          React.createElement("div", {className: "jumbotron"}, 
             React.createElement("h1", null, " React APP"), 
-            React.createElement("img", {width: "150px", height: "30px", src: "images/pluralsight-logo.png"}), 
+            React.createElement("img", {src: "../images/React.png"}), 
             React.createElement("p", null, " React, React router, and Flux for ultra - responsive web apps. ")
             /* <Link to="about" className="btn btn-primary btn-lg">Learn more</Link> */
          )
@@ -39652,6 +39652,24 @@ class Home extends React.Component{
 module.exports = Home;
 
 },{"react":32}],45:[function(require,module,exports){
+var React = require('react');
+var Link = require('react-router-dom').Link;
+
+class NotFoundPage extends React.Component{
+   render() {
+      return (
+         React.createElement("div", null, 
+            React.createElement("h1", null, "Page ", window.location.href, " Not Found"), 
+            React.createElement("p", null, "Whoops! Sorry, there is nothing to see here."), 
+            React.createElement("p", null, React.createElement(Link, {to: "/"}, "Back to home"))
+         )
+      );
+   }
+}
+
+module.exports = NotFoundPage;
+
+},{"react":32,"react-router-dom":26}],46:[function(require,module,exports){
 var ReactDOM = require('react-dom');
 var App = require('./components/app');
 var React = require('react');
@@ -39659,20 +39677,22 @@ var React = require('react');
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"./components/app":43,"react":32,"react-dom":20}],46:[function(require,module,exports){
+},{"./components/app":43,"react":32,"react-dom":20}],47:[function(require,module,exports){
 var React = require('react');
 var Route = require('react-router-dom').Route;
 var Switch = require('react-router-dom').Switch;
 var Redirect = require('react-router-dom').Redirect;
 
 var Home = require('./components/home');
+var NotFound = require('./components/pageNotFound/notFound');
 
 class Routes extends React.Component {
     render() {
         return (
             React.createElement("div", null, 
                 React.createElement(Switch, null, 
-                    React.createElement(Route, {exact: true, path: "/", component: Home})
+                    React.createElement(Route, {exact: true, path: "/", component: Home}), 
+                    React.createElement(Route, {component: NotFound})
                 )
             )
         );
@@ -39681,4 +39701,4 @@ class Routes extends React.Component {
 
 module.exports = Routes;
 
-},{"./components/home":44,"react":32,"react-router-dom":26}]},{},[45]);
+},{"./components/home":44,"./components/pageNotFound/notFound":45,"react":32,"react-router-dom":26}]},{},[46]);

@@ -4,6 +4,7 @@ var Switch = require('react-router-dom').Switch;
 var Redirect = require('react-router-dom').Redirect;
 
 var Home = require('./components/home');
+var NotFound = require('./components/pageNotFound/notFound');
 
 class Routes extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class Routes extends React.Component {
             <div>
                 <Switch>
                     <Route exact path="/" component={Home} />
+                    <Route component={NotFound}/>
                 </Switch>
             </div>
         );
