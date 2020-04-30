@@ -30,7 +30,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-eslint": "^5.0.0",
     "gulp-open": "^3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
